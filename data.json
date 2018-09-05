@@ -1,0 +1,18 @@
+The recommended structure for your JSON is to create an object literal that
+contains a single property called projects. The value of projects is an array
+containing an object for each project you wish to include in your portfolio.
+
+Each project object should contain the following properties:
+id - give each project a unique id, which can just be a single digit number
+  starting at 0 for the first project, 1 for the second project, etc.
+project_name
+description
+technologies - an array of strings containing a list of the technologies used
+  in the project
+live_link - link to the live version of the project
+github_link - link to the GitHub repo
+image_urls - an array of strings containing file paths from the views folder to
+  the images themselves. You'll need a main image to be shown on the landing
+  page, and three images to be shown on the project page.
+Note: Feel free to add extra projects to this portfolio if you have them to
+  show off.
