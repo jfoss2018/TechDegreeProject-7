@@ -148,3 +148,21 @@ a:hover{
 .portfolio-bio{
     line-height: 25px;
 }
+
+.errorContent {
+  background-color: #D1CDCD;
+  margin: 10px;
+  padding: 15px;
+  border: solid 4px #fefefe;
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+}
+
+.errorHeader {
+  color: #EB411D;
+  font-weight: bold;
+}
+
+.stackTrace {
+  color: #272525;
+}

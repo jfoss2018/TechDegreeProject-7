@@ -1,18 +1,49 @@
-The recommended structure for your JSON is to create an object literal that
-contains a single property called projects. The value of projects is an array
-containing an object for each project you wish to include in your portfolio.
-
-Each project object should contain the following properties:
-id - give each project a unique id, which can just be a single digit number
-  starting at 0 for the first project, 1 for the second project, etc.
-project_name
-description
-technologies - an array of strings containing a list of the technologies used
-  in the project
-live_link - link to the live version of the project
-github_link - link to the GitHub repo
-image_urls - an array of strings containing file paths from the views folder to
-  the images themselves. You'll need a main image to be shown on the landing
-  page, and three images to be shown on the project page.
-Note: Feel free to add extra projects to this portfolio if you have them to
-  show off.
+{
+  "projects": [
+    {
+      "id": "0",
+      "project_name": "Random Quote Generator",
+      "description": "An app that displays random famous quotes in intervals and when a button is clicked. Features include random background and button colors upon each change as well as 30 second intervals.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "live_link": "",
+      "github_link": "https://github.com/jfoss2018/TechDegreeProject",
+      "image_urls": ["/static/images/project1.png", "/static/images/project1_1.png", "/static/images/project1_2.png", "/static/images/project1_3.png"]
+    },
+    {
+      "id": "1",
+      "project_name": "Pagination & Content Filter",
+      "description": "A tool to enhance the usability of a webpage that displays too much information. This tool adheres to the principle of progressive enhancement, so even without JavaScript, this page's information is still available. The code in this application limits list items to 10, and will dynamically update the page range depending on the results available from search criteria.",
+      "technologies": ["HTML", "CSS", "JavaScript", "JQuery"],
+      "live_link": "",
+      "github_link": "https://github.com/jfoss2018/TechDegreeProject2",
+      "image_urls": ["/static/images/project2.png", "/static/images/project2_1.png", "/static/images/project2_2.png", "/static/images/project2_3.png"]
+    },
+    {
+      "id": "2",
+      "project_name": "Interactive Form",
+      "description": "An enhancement of a registration form by adding custom interactivity using conditional behavior and client-side user input validation. In this form, the JavaScript provides real time form validation as the user inputs email and credit card number. When \"other\" is selected from the job role, a new field will be displayed allowing the user to add a custom job role. Additionally, the T-shirt feild and activity feild are both restricted based on choices by the user. You can only chose T-shirt colors based on T-shirt designs and you cannot select overlapping activities. Finally, the form will not allow the user to submit information, unless all applicable fields are verified. If the user fails to input valid information, form validation errors will be present after attempting to submit the form.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "live_link": "",
+      "github_link": "https://github.com/jfoss2018/TechDegreeProject-3",
+      "image_urls": ["/static/images/project3.png", "/static/images/project3_1.png", "/static/images/project3_2.png", "/static/images/project3_3.png"]
+    },
+    {
+      "id": "3",
+      "project_name": "Tic-Tac-Toe",
+      "description": "A functional two player Tic-Tac-Toe game including an unbeatable single player option. This game will allow you to enter the players' names before starting. Subsequently, the game will display the winner when someone has satisfied the win condition of getting 3 icons in a row, or display the \"Tie\" screen when there is no winner. This game utilizes the minimax algorithm in order to create an unbeatable single player option. When challenging the computer, there is no chance of victory.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "live_link": "",
+      "github_link": "https://github.com/jfoss2018/TechDegreeProject-4",
+      "image_urls": ["/static/images/project4.png", "/static/images/project4_1.png", "/static/images/project4_2.png", "/static/images/project4_3.png"]
+    },
+    {
+      "id": "4",
+      "project_name": "Employee Directory using Public API",
+      "description": "An app to help remote employees share contact information with their coworkers. In this app, 12 random profiles are requested via AJAX from the Random User Generator API and are returned as a JSON object. Additional features include, the search box to filter profiles and the ability to access additional information on each profile by clicking on the profile to open a modal window. Each modal window allows the user to page through each profile until the beginning or ending of the list is reached.",
+      "technologies": ["HTML", "CSS", "JavaScript", "JQuery", "AJAX", "JSON"],
+      "live_link": "",
+      "github_link": "https://github.com/jfoss2018/TechDegreeProject-5",
+      "image_urls": ["/static/images/project5.png", "/static/images/project5_1.png", "/static/images/project5_2.png", "/static/images/project5_3.png"]
+    }
+  ]
+}

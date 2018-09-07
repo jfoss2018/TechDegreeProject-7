@@ -1,10 +1,15 @@
 {
   "name": "techdegreeproject-7",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Portfolio",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfoss2018/TechDegreeProject-7.git"
   },
   "author": "James Foss",
   "license": "ISC",

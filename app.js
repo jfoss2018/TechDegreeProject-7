@@ -12,31 +12,87 @@
 // but work well in this project as landscape images that present well at 1200px
 // by 550px.
 
+/*****************
+    data.json file
+*****************/
+
+// The recommended structure for your JSON is to create an object literal that
+// contains a single property called projects. The value of projects is an array
+// containing an object for each project you wish to include in your portfolio.
+
+// Each project object should contain the following properties:
+// id - give each project a unique id, which can just be a single digit number
+//   starting at 0 for the first project, 1 for the second project, etc.
+// project_name
+// description
+// technologies - an array of strings containing a list of the technologies used
+//   in the project
+// live_link - link to the live version of the project
+// github_link - link to the GitHub repo
+// image_urls - an array of strings containing file paths from the views folder to
+//   the images themselves. You'll need a main image to be shown on the landing
+//   page, and three images to be shown on the project page.
+// Note: Feel free to add extra projects to this portfolio if you have them to
+//   show off.
+
 /********************
   Set up Server Routes & Middleware
 ********************/
 
 // Add variables to require the necessary dependencies. You'll need to require:
 // Express
+const express = require('express');
+const app = express();
+const projects = require('./data.json');
 // Your data.json file
 // Optionally - the path module which can be used when setting the absolute path
 // in the express.static function.
-
+app.use('/static', express.static('public'));
 // Set up your middleware:
+app.use((req, res, next) => {
+  next();
+});
 // set your “view engine” to “pug”
+app.set('view engine', 'pug');
 // use a static route and the express.static method to serve the static files
 // located in the public folder
 
 // Set your routes. You'll need:
 // An "index" route (/) to render the "Home" page with the locals set to
 // data.projects
+app.get('/', (req, res, next) => {
+  res.render('index', projects);
+});
 // An "about" route (/about) to render the "About" page
+app.get('/about', (req, res, next) => {
+  res.render('about');
+});
 // Dynamic "project" routes (/project or /projects) based on the id of the
 // project that render a customized version of the Pug project template to show
 // off each project. Which means adding data, or "locals", as an object that
 // contains data to be passed to the Pug template.
+app.get('/projects/:id', (req, res, next) => {
+  const projectData = projects.projects[req.params.id];
+  res.render('project', projectData);
+});
+
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  res.locals.error = err;
+  res.status(404);
+  console.log(`There was an error when attempting to reach this URL.\nError Code: ${err.status}\n${err.message}`);
+  res.render('error');
+});
 // Finally, start your server. Your app should listen on port 3000, and log a
 // string to the console that says which port the app is listening to.
+app.listen(3000, () => {
+  console.log('This app is listening on port 3000.');
+});
 
 /*********************
     Handle Errors
