@@ -1,8 +1,9 @@
 extends layout.pug
 
 block content
-  .errorContent
-    h2= 'Sorry guys, this page does not exist!'
+  if error.status === 404
+    .errorContent
+      h2= 'Sorry guys, this page does not exist!'
   .errorContent
     h1.errorHeader= `Error: ${error.status}, ${error.message}`
-    p.stackTrace= error.stack
+    pre.stackTrace= error.stack

@@ -149,6 +149,10 @@ a:hover{
     line-height: 25px;
 }
 
+/*********************
+  Added styles
+*********************/
+
 .errorContent {
   background-color: #D1CDCD;
   margin: 10px;
@@ -165,4 +169,17 @@ a:hover{
 
 .stackTrace {
   color: #272525;
+  font-size: .75em;
+}
+
+.text-light, .portfolio-bio p, {
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+#my-info, .button {
+  background-color: #122C78;
+}
+
+.cell.auto, .cell.auto p, .cell.auto a{
+  color: white;
 }
