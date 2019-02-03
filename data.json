@@ -15,7 +15,7 @@
       "description": "A tool to enhance the usability of a webpage that displays too much information. This tool adheres to the principle of progressive enhancement, so even without JavaScript, this page's information is still available. The code in this application limits list items to 10, and will dynamically update the page range depending on the results available from search criteria.",
       "technologies": ["HTML", "CSS", "JavaScript", "JQuery"],
       "live_link": "",
-      "github_link": "https://github.com/jfoss2018/TechDegreeProject2",
+      "github_link": "https://github.com/jfoss2018/TechDegreeProject-2",
       "image_urls": ["/static/images/project2.png", "/static/images/project2_1.png", "/static/images/project2_2.png", "/static/images/project2_3.png"]
     },
     {
