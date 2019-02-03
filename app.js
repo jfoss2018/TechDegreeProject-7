@@ -64,8 +64,10 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
+const port = process.env.PORT || 3000;
+
 // Starts the server on port 3000 and logs a message to the console.
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('This app is listening on port 3000.');
 });
 
